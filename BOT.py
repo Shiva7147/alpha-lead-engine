@@ -10,8 +10,8 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 # 🔐 ENV VARIABLES (SET IN RAILWAY)
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
+BOT_TOKEN = os.getenv("AAE0ZTgk4zMqe-w8vagA2PYB_VweWRiSNOA")
+CHAT_ID = os.getenv("8686464812")
 
 URL = "https://shop.royalchallengers.com/ticket"
 
