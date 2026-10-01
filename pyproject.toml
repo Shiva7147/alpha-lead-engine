@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "alpha-lead-engine"
+version = "1.0.0"
+description = "Production-ready autonomous AI lead discovery, line-by-line validation, and outreach automation framework."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Alpha Lead Engine Team" }
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+    "playwright>=1.40.0",
+    "dnspython>=2.4.0",
+    "google-auth-oauthlib>=1.2.0",
+    "google-api-python-client>=2.100.0",
+]
+
+[project.optional-dependencies]
+crawlers = [
+    "firecrawl-py>=1.0.0",
+    "crawl4ai>=0.3.0",
+    "apify-client>=1.6.0",
+]
+llms = [
+    "google-genai>=0.1.0",
+    "openai>=1.20.0",
+    "anthropic>=0.20.0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+alpha-lead-engine = "alpha_lead_engine.cli:main"
