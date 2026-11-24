@@ -1,0 +1,28 @@
+# Alpha Lead Engine Core Configuration
+
+crawler:
+  headless: true
+  slow_mo_ms: 250
+  timeout_seconds: 25
+  max_concurrent_crawls: 5
+  user_agent_rotation: true
+
+auditor:
+  min_fit_score_for_outreach: 70
+  strict_mx_verification: true
+  require_decision_maker_identified: true
+
+escalation:
+  mandatory_human_review: true
+  mobile_push_enabled: true
+  ntfy_topic: "alpha_lead_engine_alerts"
+  notification_channels:
+    - ntfy
+    - telegram
+    - terminal
+
+campaign:
+  followup_day_1_delay_days: 3
+  followup_day_2_delay_days: 7
+  daily_send_limit: 50
+  simulate_mode: false
